@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nathan Castillo — Transactional sports &amp; corporate law</title>
+<meta name="description" content="Nathan Castillo. USC Legal Studies '26, J.D. Candidate at Loyola Law School, Office Manager at California Property Law Group.">
+<link rel="canonical" href="https://nathancastillo.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nathancastillo.com/">
+<meta property="og:title" content="Nathan Castillo — Transactional sports &amp; corporate law">
+<meta property="og:description" content="USC Legal Studies '26. J.D. Candidate, Loyola Law School. Office Manager at California Property Law Group, Los Angeles.">
+<meta property="og:image" content="https://nathancastillo.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#191A2E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --indigo:#191A2E;
+  --indigo-2:#232544;
+  --paper:#F4F2ED;
+  --amber:#F2A93B;
+  --rose:#E0576B;
+  --slate:#8A8CAE;
+  --rule:rgba(244,242,237,.14);
+
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+
+/* grain + ledger ruling over the whole page */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:repeating-linear-gradient(90deg,rgba(244,242,237,.028) 0 1px,transparent 1px 96px);
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 62%);
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 62%);
+}
+header,section,footer,nav{position:relative;z-index:1}
+
+/* buttons */
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin:36px 0 0}
+.btn{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;padding:15px 26px;border-radius:2px;display:inline-flex;align-items:center;gap:10px;
+  transition:transform .2s ease,background .2s ease,color .2s ease;
+}
+.btn-solid{background:var(--amber);color:#191A2E;font-weight:500}
+.btn-solid:hover{transform:translateY(-2px);background:#FFBE55}
+.btn-ghost{border:1px solid rgba(244,242,237,.28);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* sticky nav */
+nav.site{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(25,26,46,.86);border-bottom:1px solid var(--rule);
+}
+nav.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:13px;padding-bottom:13px}
+nav.site a{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--slate);text-decoration:none;
+}
+nav.site a:hover{color:var(--amber)}
+nav.site .brand{color:var(--paper)}
+nav.site .links{display:flex;gap:26px}
+@media (max-width:640px){nav.site .links a:nth-child(-n+2){display:none}}
+
+/* the ask */
+.ask{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start}
+.ask p{font-size:19px;color:#DFDCD5;margin:0 0 20px;max-width:54ch}
+.asklist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.asklist li{
+  padding:15px 0;border-bottom:1px solid var(--rule);
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:#DAD7D0;line-height:1.5;
+}
+.asklist li b{display:block;color:var(--amber);font-weight:400;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:5px}
+@media (max-width:820px){.ask{grid-template-columns:1fr;gap:34px}}
+
+.disclaimer{
+  font-family:var(--mono);font-size:11px;line-height:1.7;color:rgba(138,140,174,.72);
+  letter-spacing:.04em;max-width:62ch;margin:34px 0 0;
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;
+  background:var(--indigo);
+  color:var(--paper);
+  font-family:var(--body);
+  font-size:18px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+/* ---------- shared bits ---------- */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--slate);
+  margin:0 0 22px;
+}
+section{padding:88px 0;border-top:1px solid var(--rule)}
+h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(28px,4vw,40px);
+  letter-spacing:-.02em;
+  line-height:1.1;
+  margin:0 0 34px;
+}
+
+/* ---------- hero ---------- */
+header{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:34px 0 40px;position:relative;overflow:hidden;
+}
+header::after{
+  content:"";position:absolute;right:-18vw;top:-14vh;width:62vw;height:62vw;
+  background:radial-gradient(circle,rgba(242,169,59,.14) 0%,rgba(224,87,107,.07) 42%,transparent 68%);
+  pointer-events:none;
+}
+.topbar{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);
+  position:relative;z-index:1;
+}
+.topbar .who-name{color:var(--paper)}
+
+.hero{position:relative;z-index:1;padding:8vh 0 0}
+.hero .kicker{
+  font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);margin:0 0 30px;display:flex;align-items:center;gap:14px;
+}
+.hero .kicker::before{content:"";width:52px;height:2px;background:var(--rose);flex:none}
+
+.headline{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:clamp(46px,9.2vw,124px);
+  line-height:.92;
+  letter-spacing:-.042em;
+  margin:0;
+  max-width:16ch;
+  text-wrap:balance;
+}
+.headline .line{display:block;overflow:hidden}
+.headline .line > i{display:block;font-style:normal}
+.headline .hl{color:var(--amber)}
+.headline .hl-2{color:var(--rose)}
+
+.sub{
+  font-size:clamp(18px,2.1vw,24px);
+  line-height:1.5;
+  max-width:46ch;
+  margin:34px 0 0;
+  color:#DFDCD5;
+}
+.sub b{font-weight:500;color:var(--paper)}
+
+.herofoot{
+  position:relative;z-index:1;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px 40px;flex-wrap:wrap;
+  border-top:1px solid var(--rule);padding-top:22px;
+}
+.meta{
+  display:flex;gap:12px 30px;flex-wrap:wrap;margin:0;
+  font-family:var(--mono);font-size:13px;color:var(--slate);
+}
+.meta a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:2px}
+.meta a:hover{color:var(--amber)}
+.scroll-cue{
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--slate);text-decoration:none;display:flex;align-items:center;gap:10px;
+}
+.scroll-cue:hover{color:var(--amber)}
+.scroll-cue i{font-style:normal;animation:nudge 2.4s ease-in-out infinite}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* staged load */
+.stage{opacity:0;transform:translateY(22px);animation:rise .9s cubic-bezier(.2,.7,.3,1) forwards}
+.stage.s1{animation-delay:.05s}
+.stage.s2{animation-delay:.18s}
+.stage.s3{animation-delay:.29s}
+.stage.s4{animation-delay:.40s}
+.stage.s5{animation-delay:.56s}
+.stage.s6{animation-delay:.68s}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .stage{opacity:1;transform:none;animation:none}
+  .scroll-cue i{animation:none}
+}
+@media (max-width:820px){
+  header{min-height:auto;padding:28px 0 56px}
+  .hero{padding:9vh 0 8vh}
+  .headline{max-width:12ch}
+  .herofoot{flex-direction:column;align-items:flex-start}
+  .scroll-cue{display:none}
+}
+
+/* ---------- ledger (signature) ---------- */
+.ledger-note{color:var(--slate);font-size:15px;margin:-20px 0 34px;max-width:56ch}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);margin-bottom:26px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:8px;vertical-align:1px}
+.d-law{background:var(--amber)}.d-lead{background:var(--rose)}.d-edu{background:var(--slate)}
+
+.ledger{border-top:1px solid var(--rule)}
+.years{
+  display:grid;grid-template-columns:230px 1fr;align-items:end;
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--slate);
+  padding:10px 0;position:sticky;top:0;background:var(--indigo);z-index:2;
+}
+.years .scale{display:flex;justify-content:space-between}
+.row{
+  display:grid;grid-template-columns:230px 1fr;align-items:center;
+  gap:0 18px;padding:9px 0;border-top:1px solid var(--rule);
+}
+.row:hover{background:rgba(244,242,237,.035)}
+.row .who{font-size:15px;line-height:1.3}
+.row .who small{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--slate);margin-top:3px}
+.rail{position:relative;height:24px}
+.rail::before,.rail::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--rule)}
+.rail::before{left:0}.rail::after{right:0}
+.bar{
+  position:absolute;top:5px;height:14px;border-radius:7px;
+  transform-origin:left center;
+}
+.bar span{
+  position:absolute;left:calc(100% + 10px);top:-3px;white-space:nowrap;
+  font-family:var(--mono);font-size:10.5px;color:var(--slate);
+}
+.law{background:linear-gradient(90deg,var(--amber),#E8952A)}
+.lead{background:linear-gradient(90deg,var(--rose),#C9455C)}
+.edu{background:repeating-linear-gradient(90deg,var(--slate) 0 6px,rgba(138,140,174,.35) 6px 11px)}
+.now{box-shadow:0 0 0 3px rgba(242,169,59,.18)}
+
+.mobile-list{display:none}
+
+/* ---------- practice ---------- */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.card{background:var(--indigo);padding:30px 28px}
+.card h3{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.01em;margin:0 0 10px}
+.card p{margin:0;font-size:16px;color:#DAD7D0;line-height:1.55}
+.card .num{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.14em;display:block;margin-bottom:14px}
+
+.stack{font-family:var(--mono);font-size:12.5px;color:var(--slate);letter-spacing:.05em;margin-top:26px}
+.stack b{color:var(--paper);font-weight:400}
+
+/* ---------- honors ---------- */
+.honors{list-style:none;padding:0;margin:0;columns:2;column-gap:48px}
+.honors li{break-inside:avoid;padding:14px 0;border-bottom:1px solid var(--rule);font-size:16.5px}
+.honors li span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-top:5px}
+
+/* ---------- footer ---------- */
+footer{padding:80px 0 96px;border-top:1px solid var(--rule)}
+.cta{font-family:var(--display);font-weight:600;font-size:clamp(30px,6vw,64px);letter-spacing:-.03em;line-height:1;margin:0 0 34px}
+.cta a{text-decoration:none;border-bottom:3px solid var(--amber)}
+.cta a:hover{color:var(--amber)}
+.colophon{font-family:var(--mono);font-size:11.5px;color:var(--slate);letter-spacing:.09em;text-transform:uppercase;margin-top:56px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .bar{animation:none !important}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:820px){
+  body{font-size:17px}
+  .grid{grid-template-columns:1fr}
+  .honors{columns:1}
+  .years,.row{grid-template-columns:1fr}
+  .row .rail{display:none}
+  .years{display:none}
+  .ledger{border-top:none}
+  .row{padding:16px 0}
+  .row .when{font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.08em;margin-top:6px}
+}
+@media (min-width:821px){.row .when{display:none}}
+
+/* ---------- affiliation bar ---------- */
+.affil{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:26px 0}
+.affil .wrap{display:flex;gap:14px 44px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.affil span{font-family:var(--mono);font-size:11.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--slate)}
+.affil span b{color:var(--paper);font-weight:400}
+@media (max-width:820px){.affil .wrap{gap:12px 26px;justify-content:flex-start}}
+
+/* ---------- print to clean PDF ---------- */
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  body::before,body::after,header::after,nav.site,.scroll-cue,.btns,.affil{display:none!important}
+  header{min-height:auto;padding:0 0 18pt}
+  .headline{font-size:30pt;max-width:none}
+  .headline .hl,.headline .hl-2{color:#000}
+  section{padding:16pt 0;break-inside:avoid}
+  .rail{display:none}
+  .row{grid-template-columns:1fr}
+  .row .when{display:block;font-size:8pt;color:#444}
+  .grid{grid-template-columns:1fr 1fr}
+  a{text-decoration:none;color:#000}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Nathan Castillo",
+  "url":"https://nathancastillo.com/",
+  "email":"nathancastillo629@gmail.com",
+  "jobTitle":"Office Manager",
+  "worksFor":{"@type":"Organization","name":"California Property Law Group, LLP"},
+  "address":{"@type":"PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"},
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"University of Southern California"},
+    {"@type":"CollegeOrUniversity","name":"Glendale Community College"}
+  ],
+  "sameAs":["https://www.linkedin.com/in/nathancastillo4126"],
+  "knowsAbout":["Transactional law","Sports law","Corporate law","Name Image and Likeness","Landlord-tenant litigation"]
+}
+</script>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap topbar stage s1">
+    <span class="who-name">Nathan Castillo</span>
+    <span>Los Angeles, CA</span>
+  </div>
+
+  <div class="wrap hero">
+    <p class="kicker stage s2">Transactional sports &amp; corporate law</p>
+    <h1 class="headline">
+      <span class="line stage s3"><i>Every deal starts</i></span>
+      <span class="line stage s4"><i>as a <span class="hl">legal</span></i></span>
+      <span class="line stage s5"><i><span class="hl">question</span><span class="hl-2">.</span></i></span>
+    </h1>
+    <p class="sub stage s6">I'm a <b>J.D. candidate at Loyola Law School</b> and a USC Legal Studies alum, working on the deal side — contracts, licensing, IP strategy, and the regulation that decides what a deal can look like before anyone reaches the table.</p>
+    <div class="btns stage s6">
+      <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Hello%20Nathan">Start a conversation</a>
+      <a class="btn btn-ghost" href="resume.pdf">Resume &darr;</a>
+    </div>
+  </div>
+
+  <div class="wrap herofoot stage s6">
+    <p class="meta">
+      <span>Office Manager, California Property Law Group</span>
+      <a href="mailto:nathancastillo629@gmail.com">nathancastillo629@gmail.com</a>
+      <a href="https://www.linkedin.com/in/nathancastillo4126">LinkedIn</a>
+    </p>
+    <a class="scroll-cue" href="#ledger">The record <i>&darr;</i></a>
+  </div>
+</header>
+
+<nav class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Nathan Castillo</a>
+    <span class="links">
+      <a href="#ledger">Record</a>
+      <a href="#work">Current work</a>
+      <a href="#ask">What I'm looking for</a>
+      <a href="mailto:nathancastillo629@gmail.com">Contact</a>
+    </span>
+  </div>
+</nav>
+
+<div class="affil">
+  <div class="wrap">
+    <span><b>Loyola Law School</b> &nbsp;J.D. Candidate '29</span>
+    <span><b>USC</b> &nbsp;B.S. Legal Studies '26</span>
+    <span><b>LA Superior Court</b> &nbsp;Judicial Intern</span>
+    <span><b>LA County D.A.</b> &nbsp;Student Worker</span>
+    <span><b>California Property Law Group</b> &nbsp;Office Manager</span>
+  </div>
+</div>
+
+<section id="ledger">
+  <div class="wrap">
+    <p class="eyebrow">2022 — 2029</p>
+    <h2>Record of appearances</h2>
+    <p class="ledger-note">Nothing here happened one at a time. Community college and USC overlapped with campaign work, court internships, and a firm job — the bars show how much ran at once.</p>
+    <p class="legend">
+      <span><i class="dot d-law"></i>Legal &amp; courts</span>
+      <span><i class="dot d-lead"></i>Leadership &amp; service</span>
+      <span><i class="dot d-edu"></i>Education</span>
+    </p>
+
+    <div class="ledger">
+      <div class="years" aria-hidden="true">
+        <div></div>
+        <div class="scale"><span>'22</span><span>'23</span><span>'24</span><span>'25</span><span>'26</span><span>'27</span><span>'28</span><span>'29</span></div>
+      </div>
+
+      <!-- rows: --s and --w are % across a 2022.4–2029.4 span -->
+      <div class="row">
+        <div class="who">Office Manager, California Property Law Group<small>Los Angeles</small><div class="when">May 2026 — present</div></div>
+        <div class="rail"><div class="bar law now" style="--s:57.9%;--w:3.6%;left:var(--s);width:var(--w)"><span>now</span></div></div>
+      </div>
+      <div class="row">
+        <div class="who">J.D. Candidate, Loyola Law School<small>Class of 2029</small><div class="when">2026 — 2029</div></div>
+        <div class="rail"><div class="bar edu" style="--s:58.6%;--w:41%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Director of Internal Outreach, Latino Students in Law<small>USC</small><div class="when">Aug 2025 — May 2026</div></div>
+        <div class="rail"><div class="bar lead" style="--s:44.3%;--w:11.4%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">West Coast Regional Director, Legally Lawtino<div class="when">Aug 2025 — May 2026</div></div>
+        <div class="rail"><div class="bar lead" style="--s:44.3%;--w:11.4%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Legal Intern, Larhdel Law<small>Immigration &amp; business</small><div class="when">Aug — Oct 2025</div></div>
+        <div class="rail"><div class="bar law" style="--s:44.3%;--w:2.9%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">LSAC PLUS Program Scholar<div class="when">Apr 2025 — May 2026</div></div>
+        <div class="rail"><div class="bar lead" style="--s:39.3%;--w:16.4%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Volunteer Student Worker, LA County D.A.<small>Glendale</small><div class="when">May — Aug 2025</div></div>
+        <div class="rail"><div class="bar law" style="--s:40.7%;--w:4.3%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Judicial Intern, LA Superior Court<div class="when">Jun — Jul 2025</div></div>
+        <div class="rail"><div class="bar law" style="--s:42.1%;--w:2.1%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Associate Editor, USC Journal of Law and Society<div class="when">Mar — May 2025</div></div>
+        <div class="rail"><div class="bar lead" style="--s:38.6%;--w:2.9%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">B.S. Legal Studies, USC<small>Transfer, Class of 2026</small><div class="when">2024 — 2026</div></div>
+        <div class="rail"><div class="bar edu" style="--s:30.7%;--w:24.3%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Voting Member, USC Legal Studies Student Association<div class="when">Oct 2024 — Aug 2025</div></div>
+        <div class="rail"><div class="bar lead" style="--s:33.6%;--w:13.6%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Committee on Affordability &amp; Basic Needs, USG<div class="when">Sep 2024 — May 2025</div></div>
+        <div class="rail"><div class="bar lead" style="--s:32.1%;--w:11.4%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Intern, Nick Schultz for Assembly<small>Burbank</small><div class="when">Aug — Nov 2024</div></div>
+        <div class="rail"><div class="bar lead" style="--s:30.7%;--w:4.3%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">College Corps Fellow<small>450 hours, hunger relief</small><div class="when">Aug 2023 — Jul 2024</div></div>
+        <div class="rail"><div class="bar lead" style="--s:16.4%;--w:14.3%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Supplemental Instruction Leader, Glendale College<small>Sociology 101</small><div class="when">Aug 2023 — Jun 2024</div></div>
+        <div class="rail"><div class="bar lead" style="--s:16.4%;--w:12.9%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">Intern, USC Institute for Creative Technologies<small>Veteran mental health app</small><div class="when">Feb — May 2024</div></div>
+        <div class="rail"><div class="bar lead" style="--s:23.6%;--w:4.3%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+      <div class="row">
+        <div class="who">A.A. Political Science, Glendale Community College<div class="when">2022 — 2024</div></div>
+        <div class="rail"><div class="bar edu" style="--s:2.9%;--w:26.4%;left:var(--s);width:var(--w)"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow">Current work</p>
+    <h2>What an office manager<br>actually runs at a litigation firm</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="num">Calendar</span>
+        <h3>Court coverage for five attorneys</h3>
+        <p>Assign counsel across simultaneous courtrooms — trials, ex partes, motions, OSCs — with no duplicate appearances and no missed hearings.</p>
+      </div>
+      <div class="card">
+        <span class="num">Billing</span>
+        <h3>Revenue that would have been left on the table</h3>
+        <p>Audit every active matter in Clio against the calendar before each hearing so appearance fees and motion prep are actually invoiced. Recovered unbilled charges across regular, Empire, and institutional clients.</p>
+      </div>
+      <div class="card">
+        <span class="num">Enforcement</span>
+        <h3>Writs of possession, end to end</h3>
+        <p>Prepare SER-001, SER-001A, and EJ-130 packages, coordinate with LASD civil service, generate shipping labels, and track every submission.</p>
+      </div>
+      <div class="card">
+        <span class="num">Filings</span>
+        <h3>Notices of ruling and service</h3>
+        <p>Draft and process notices through the LASC Attorney Portal and Countrywide e-filing, then manage electronic and mail service and proof-of-service compliance.</p>
+      </div>
+    </div>
+    <p class="stack"><b>Tools</b> — Clio · LASC Attorney Portal · Countrywide E-Filing · Adobe Acrobat · Front · Stamps · Microsoft Excel</p>
+  </div>
+</section>
+
+<section id="focus">
+  <div class="wrap">
+    <p class="eyebrow">Where I'm headed</p>
+    <h2>Transactional sports<br>and corporate law</h2>
+    <p style="max-width:62ch;font-size:19px;color:#DFDCD5">My USC capstone looked at regulatory instability in college athletics — NIL rights, the transfer portal, and the case for federal oversight. Writing it taught me something I keep coming back to: legal frameworks decide what deals are possible before anyone gets to the negotiating table.</p>
+    <p style="max-width:62ch;font-size:19px;color:#DFDCD5">Court internships at the LA Superior Court and the District Attorney's Office showed me how the system runs day to day across criminal, civil, family, and mental health proceedings. The 450 hours I put in with College Corps on hunger relief across LA County are the other half of it. I'd like to spend a career closing deals and still be useful to the communities I came from.</p>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="wrap">
+    <p class="eyebrow">The ask</p>
+    <h2>What I'm looking for</h2>
+    <div class="ask">
+      <div>
+        <p>I start at Loyola this fall. Between now and my 1L summer, the most useful thing anyone can give me is twenty minutes — how a transactional group actually staffs juniors, what a first-year deal associate's week looks like, what you wish you'd known before OCI.</p>
+        <p>I've had those conversations with attorneys at Gibson Dunn, Kirkland &amp; Ellis, and Willkie Farr, and every one of them changed how I'm planning the next three years. If any of the below is in your world, I'd like to hear from you.</p>
+        <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Coffee%20chat">Email me &rarr;</a>
+      </div>
+      <ul class="asklist">
+        <li><b>Practice areas</b>Sports and entertainment transactions, corporate and M&amp;A, licensing and IP, NIL and college athletics regulation</li>
+        <li><b>Timing</b>1L summer 2027 · 2L summer 2028 · open to informational conversations now</li>
+        <li><b>Based in</b>Los Angeles — available in person across the county</li>
+        <li><b>Also useful</b>Referrals, panel and speaker introductions, and anything aimed at first-generation and Latino students entering the profession</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="honors">
+  <div class="wrap">
+    <p class="eyebrow">Recognition</p>
+    <h2>Honors</h2>
+    <ul class="honors">
+      <li>Order of Troy<span>74 students university-wide</span></li>
+      <li>Dr. John R. Hubbard Award<span>Finalist</span></li>
+      <li>Spirit of Troy Legal Studies Scholarship<span>Continuing students</span></li>
+      <li>USC Latino Alumni Association Undergraduate Scholarship<span>2025–2026</span></li>
+      <li>Legal Studies Community Impact Scholarship<span>USC</span></li>
+      <li>Dream Dollars Scholarship<span>Summer 2025</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="eyebrow">Get in touch</p>
+    <p class="cta">Starting 1L this fall &mdash;<br><a href="mailto:nathancastillo629@gmail.com">let's talk.</a></p>
+    <p class="meta" style="margin-top:0">
+      <a href="mailto:nathancastillo629@gmail.com">nathancastillo629@gmail.com</a>
+      <a href="https://www.linkedin.com/in/nathancastillo4126">linkedin.com/in/nathancastillo4126</a>
+      <span>Los Angeles, California</span>
+    </p>
+    <p class="disclaimer">Nathan Castillo is a law student and is not an attorney. Nothing on this site is legal advice, an offer to provide legal services, or a solicitation of clients, and no attorney-client relationship is created by contacting him.</p>
+    <p class="colophon"><span>Nathan Castillo &middot; Los Angeles</span><span>Fight On</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var targets = document.querySelectorAll('section .wrap > *, .row');
+  targets.forEach(function(el){ el.classList.add('reveal'); });
+  if(reduce || !('IntersectionObserver' in window)){
+    targets.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+  targets.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
