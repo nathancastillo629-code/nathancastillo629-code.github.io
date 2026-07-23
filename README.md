@@ -8,12 +8,15 @@ Domain is registered — everything below is deployment.
 | File | What it does |
 |---|---|
 | `index.html` | The entire site |
-| `og.png` | Social preview card (shows when the link is shared) |
+| `hero.jpg` · `portrait.jpg` · `campus.jpg` | Photography |
+| `resume.pdf` | Linked from the hero and footer |
+| `og.png` | Social preview card |
 | `favicon.svg` | Browser tab icon |
 | `CNAME` | Tells GitHub Pages to serve nathancastillo.com |
 | `robots.txt` / `sitemap.xml` | Search engine basics |
 
-All files already reference nathancastillo.com. No edits needed before deploying.
+Upload every file to the repo root. To swap a photo later, replace the file
+keeping the same name — no code changes needed.
 
 ## Step 1 — Host it (free, ~10 min)
 
