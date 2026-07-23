@@ -13,8 +13,10 @@
 <meta property="og:image" content="https://nathancastillo.com/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF6EF">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png?v=2" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon-192.png?v=2" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -33,7 +35,7 @@
     {"@type":"CollegeOrUniversity","name":"University of Southern California"},
     {"@type":"CollegeOrUniversity","name":"Glendale Community College"}
   ],
-  "sameAs":["https://www.linkedin.com/in/nathancastillo4126"],
+  "sameAs":["https://www.linkedin.com/in/nathan-castillo4126/"],
   "knowsLanguage":["English","Spanish"],
   "knowsAbout":["Transactional law","Sports law","Corporate law","Name Image and Likeness","Licensing and IP","Landlord-tenant litigation"]
 }
@@ -93,7 +95,12 @@ section{padding:96px 0;border-top:1px solid var(--rule-2)}
 .btn-solid:hover{background:var(--terra-dk)}
 .btn-ghost{border:1px solid var(--rule);color:var(--ink)}
 .btn-ghost:hover{border-color:var(--terra);color:var(--terra)}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:34px}
+.btn-copy{background:none;border:1px solid var(--rule);color:var(--ink);cursor:pointer;font-family:var(--sans)}
+.btn-copy:hover{border-color:var(--terra);color:var(--terra)}
+.btn-copy.done{border-color:var(--terra);color:var(--terra)}
+.mailnote{font-size:13.5px;color:var(--muted);margin:14px 0 0}
+.mailnote a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--terra)}
 
 /* ---------- nav ---------- */
 nav.site{position:sticky;top:0;z-index:30;background:rgba(250,246,239,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule-2)}
@@ -297,6 +304,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
         <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Hello%20Nathan">Start a conversation</a>
         <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
       </div>
+      <p class="mailnote">Or reach me directly at <a href="mailto:nathancastillo629@gmail.com">nathancastillo629@gmail.com</a></p>
     </div>
     <div class="media">
       <div class="frame offset">
@@ -521,8 +529,10 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
         <p class="lead">I've had those conversations with attorneys at Gibson Dunn, Kirkland &amp; Ellis, and Willkie Farr, and each one changed how I'm planning the next three years. If any of the below sits in your world, I'd like to hear from you.</p>
         <div class="btns">
           <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Coffee%20chat">Email me</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/nathancastillo4126" target="_blank" rel="noopener">LinkedIn</a>
+          <button class="btn btn-copy" type="button" data-copy="nathancastillo629@gmail.com">Copy address</button>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/nathan-castillo4126/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
+        <p class="mailnote">nathancastillo629@gmail.com</p>
       </div>
       <ul class="asklist">
         <li><b>Practice Areas</b>Sports and entertainment transactions · corporate and M&amp;A · licensing and IP · NIL and college athletics regulation</li>
@@ -540,7 +550,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     <p class="cta">Starting 1L this fall —<br><a href="mailto:nathancastillo629@gmail.com">let's talk.</a></p>
     <p class="fmeta">
       <a href="mailto:nathancastillo629@gmail.com">nathancastillo629@gmail.com</a>
-      <a href="https://www.linkedin.com/in/nathancastillo4126" target="_blank" rel="noopener">linkedin.com/in/nathancastillo4126</a>
+      <a href="https://www.linkedin.com/in/nathan-castillo4126/" target="_blank" rel="noopener">linkedin.com/in/nathan-castillo4126</a>
       <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
       <span>Los Angeles, California</span>
     </p>
@@ -548,6 +558,21 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     <p class="colophon"><span>Nathan Castillo · Los Angeles</span><span>Fight On</span></p>
   </div>
 </footer>
+
+<script>
+(function(){
+  document.querySelectorAll('.btn-copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var v = b.getAttribute('data-copy'), old = b.textContent;
+      var done = function(){ b.textContent='Copied'; b.classList.add('done');
+        setTimeout(function(){ b.textContent=old; b.classList.remove('done'); },1800); };
+      if(navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(v).then(done); }
+      else { var t=document.createElement('textarea'); t.value=v; document.body.appendChild(t);
+             t.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done(); }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
