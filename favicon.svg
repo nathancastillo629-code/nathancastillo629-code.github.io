@@ -1,6 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#FAF6EF"/>
-  <rect x="12" y="19" width="36" height="5" fill="#A34E2C"/>
-  <rect x="12" y="30" width="24" height="5" fill="#C08256"/>
-  <rect x="12" y="41" width="40" height="5" fill="#E7DCCB"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="NC monogram">
+  <rect width="64" height="64" rx="9" fill="#241C17"/>
+  <g fill="none" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#FAF6EF">
+      <path d="M13 43V21"/>
+      <path d="M13 21l14 22"/>
+      <path d="M27 43V21"/>
+    </g>
+    <path d="M51 25a10 10 0 100 14" stroke="#C87E4A"/>
+  </g>
 </svg>

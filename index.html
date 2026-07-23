@@ -14,6 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#FAF6EF">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -97,7 +98,9 @@ section{padding:96px 0;border-top:1px solid var(--rule-2)}
 /* ---------- nav ---------- */
 nav.site{position:sticky;top:0;z-index:30;background:rgba(250,246,239,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule-2)}
 nav.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:15px;padding-bottom:15px;gap:20px}
-nav.site .brand{font-family:var(--display);font-size:17px;font-weight:500;text-decoration:none;letter-spacing:-.01em}
+nav.site .brand{font-family:var(--display);font-size:17px;font-weight:500;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:11px}
+nav.site .mark{width:29px;height:29px;flex:none;border-radius:5px;display:block}
+@media (max-width:420px){nav.site .brand span{display:none}}
 nav.site .links{display:flex;gap:30px}
 nav.site .links a{font-size:11.5px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-decoration:none}
 nav.site .links a:hover{color:var(--terra)}
@@ -263,7 +266,18 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
 
 <nav class="site">
   <div class="wrap">
-    <a class="brand" href="#top">Nathan Castillo</a>
+    <a class="brand" href="#top" aria-label="Nathan Castillo — home">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="9" fill="#241C17"/>
+        <g fill="none" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke="#FAF6EF">
+            <path d="M13 43V21"/><path d="M13 21l14 22"/><path d="M27 43V21"/>
+          </g>
+          <path d="M51 25a10 10 0 100 14" stroke="#C87E4A"/>
+        </g>
+      </svg>
+      <span>Nathan Castillo</span>
+    </a>
     <span class="links">
       <a href="#focus">Focus</a>
       <a href="#record">Record</a>
