@@ -183,44 +183,6 @@ header{padding:76px 0 90px}
   .band .say{padding:48px 30px}
 }
 
-/* ---------- ledger ---------- */
-.ledger-note{color:var(--muted);font-size:16px;max-width:58ch;margin:-14px 0 30px}
-.legend{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:24px}
-.dot{display:inline-block;width:9px;height:9px;margin-right:8px;vertical-align:0}
-.d-law{background:var(--terra)}.d-lead{background:var(--clay)}.d-edu{background:var(--sand-2);outline:1px solid var(--rule)}
-.ledger{border-top:1px solid var(--rule)}
-.years{display:grid;grid-template-columns:250px 1fr;font-size:10.5px;letter-spacing:.1em;color:var(--muted);padding:9px 0;position:sticky;top:53px;background:var(--paper);z-index:2;font-weight:500}
-.years .scale{display:flex;justify-content:space-between}
-.row{display:grid;grid-template-columns:250px 1fr;gap:0 18px;align-items:center;padding:9px 0;border-top:1px solid var(--rule-2)}
-.row:hover{background:rgba(36,28,23,.028)}
-.row .who{font-size:14.5px;line-height:1.34}
-.row .who small{display:block;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:3px;font-weight:500}
-.rail{position:relative;height:22px}
-.rail::before,.rail::after{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--rule-2)}
-.rail::before{left:0}.rail::after{right:0}
-.bar{position:absolute;top:6px;height:11px}
-.bar span{position:absolute;left:calc(100% + 10px);top:-4px;white-space:nowrap;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);font-weight:600}
-.law{background:var(--terra)}
-.lead{background:var(--clay)}
-.edu{background:repeating-linear-gradient(90deg,var(--sand-2) 0 6px,rgba(231,220,203,.4) 6px 11px);outline:1px solid var(--rule-2)}
-.now{box-shadow:0 0 0 3px rgba(163,78,44,.16)}
-@media (max-width:860px){
-  .years{display:none}
-  .row{grid-template-columns:1fr;padding:15px 0}
-  .rail{display:none}
-  .row .when{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--terra);margin-top:5px;font-weight:600}
-}
-@media (min-width:861px){.row .when{display:none}}
-
-/* ---------- practice grid ---------- */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-2);border:1px solid var(--rule-2)}
-.grid2 .cell{background:var(--paper);padding:32px 30px}
-.grid2 .cell .n{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:14px}
-.grid2 .cell p{font-size:15.5px;color:var(--ink-2);margin:0;line-height:1.55}
-.tools{font-size:13px;color:var(--muted);margin-top:24px;letter-spacing:.02em}
-.tools b{color:var(--ink);font-weight:500}
-@media (max-width:760px){.grid2{grid-template-columns:1fr}}
-
 /* ---------- about ---------- */
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
 @media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}.about .media{max-width:320px}}
@@ -287,8 +249,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     </a>
     <span class="links">
       <a href="#focus">Focus</a>
-      <a href="#record">Record</a>
-      <a href="#practice">Current Work</a>
+      <a href="#practice">Experience</a>
       <a href="#ask">Connect</a>
     </span>
   </div>
@@ -299,7 +260,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     <div>
       <p class="kicker">Transactional Sports &amp; Corporate Law</p>
       <h1 class="headline">Every deal starts as a <em>legal question.</em></h1>
-      <p class="sub">I'm a <b>J.D. candidate at Loyola Law School</b> and a USC Legal Studies alumnus, magna cum laude. My interest is the deal side — contracts, licensing, IP strategy, and the regulation that decides what an agreement can look like before anyone reaches the table.</p>
+      <p class="sub">I'm a <b>1L at Loyola Law School</b> and a USC Legal Studies alumnus, magna cum laude. My interest is the deal side — contracts, licensing, IP strategy, and the regulation that decides what an agreement can look like before anyone reaches the table.</p>
       <div class="btns">
         <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Hello%20Nathan">Start a conversation</a>
         <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
@@ -320,7 +281,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     <div><b>USC</b>B.S. Legal Studies '26 · Magna Cum Laude</div>
     <div><b>LA Superior Court</b>Judicial Intern</div>
     <div><b>LA County D.A.</b>Volunteer Student Worker</div>
-    <div><b>California Property Law Group</b>Office Manager</div>
+    <div><b>California Property Law Group</b>Office Manager (2026)</div>
   </div>
 </div>
 
@@ -366,121 +327,12 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
   </div>
 </div>
 
-<section id="record">
-  <div class="wrap">
-    <p class="label">2022 — 2029</p>
-    <h2>Record of appearances</h2>
-    <p class="ledger-note">Nothing here happened one at a time. Community college and USC overlapped with campaign work, court internships, and a firm job — the bars show how much ran at once.</p>
-    <p class="legend">
-      <span><i class="dot d-law"></i>Legal &amp; Courts</span>
-      <span><i class="dot d-lead"></i>Leadership &amp; Service</span>
-      <span><i class="dot d-edu"></i>Education</span>
-    </p>
-
-    <div class="ledger">
-      <div class="years" aria-hidden="true">
-        <div></div>
-        <div class="scale"><span>'22</span><span>'23</span><span>'24</span><span>'25</span><span>'26</span><span>'27</span><span>'28</span><span>'29</span></div>
-      </div>
-
-      <div class="row">
-        <div class="who">Juris Doctor, Loyola Law School<small>Los Angeles</small><div class="when">2026 — 2029</div></div>
-        <div class="rail"><div class="bar edu" style="left:58.6%;width:40.4%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Office Manager, California Property Law Group<small>Landlord-tenant litigation</small><div class="when">May — Aug 2026</div></div>
-        <div class="rail"><div class="bar law now" style="left:56.1%;width:3.6%"><span>now</span></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Director of Internal Outreach, Latino Students in Law<small>USC</small><div class="when">Aug 2025 — May 2026</div></div>
-        <div class="rail"><div class="bar lead" style="left:45.4%;width:10.7%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">West Coast Regional Director, Legally Lawtino<div class="when">Aug 2025 — May 2026</div></div>
-        <div class="rail"><div class="bar lead" style="left:45.4%;width:10.7%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Legal Intern, Larhdel Law<small>Immigration &amp; business</small><div class="when">Aug — Oct 2025</div></div>
-        <div class="rail"><div class="bar law" style="left:45.4%;width:2.5%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Judicial Intern, LA Superior Court<div class="when">Jun — Aug 2025</div></div>
-        <div class="rail"><div class="bar law" style="left:43.1%;width:2.3%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Volunteer Student Worker, LA County D.A.<small>Glendale</small><div class="when">May — Aug 2025</div></div>
-        <div class="rail"><div class="bar law" style="left:41.9%;width:3.5%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">LSAC PLUS Program Scholar<div class="when">Apr 2025 — May 2026</div></div>
-        <div class="rail"><div class="bar lead" style="left:40.7%;width:15.4%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Associate Editor, USC Journal of Law and Society<div class="when">Mar 2025 — May 2026</div></div>
-        <div class="rail"><div class="bar lead" style="left:39.6%;width:16.5%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Voting Member, USC Legal Studies Student Association<div class="when">Oct 2024 — Aug 2025</div></div>
-        <div class="rail"><div class="bar lead" style="left:33.6%;width:11.8%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Committee on Affordability &amp; Basic Needs, USG<div class="when">Sep 2024 — May 2025</div></div>
-        <div class="rail"><div class="bar lead" style="left:32.4%;width:9.5%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">B.S. Legal Studies, USC<small>Magna cum laude · Transfer</small><div class="when">2024 — 2026</div></div>
-        <div class="rail"><div class="bar edu" style="left:31.1%;width:25%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Intern, Nick Schultz for Assembly<small>Burbank</small><div class="when">Aug — Nov 2024</div></div>
-        <div class="rail"><div class="bar lead" style="left:31.1%;width:3.6%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Intern, USC Institute for Creative Technologies<small>Veteran mental health app</small><div class="when">Feb — May 2024</div></div>
-        <div class="rail"><div class="bar lead" style="left:24%;width:3.6%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">College Corps Fellow, AmeriCorps<small>450 hours · hunger relief</small><div class="when">Aug 2023 — Jul 2024</div></div>
-        <div class="rail"><div class="bar lead" style="left:16.9%;width:13.1%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">Supplemental Instruction Leader, Glendale College<small>Sociology 101</small><div class="when">Aug 2023 — Jun 2024</div></div>
-        <div class="rail"><div class="bar lead" style="left:16.9%;width:12%"></div></div>
-      </div>
-      <div class="row">
-        <div class="who">A.A. Political Science, Glendale Community College<div class="when">2022 — 2024</div></div>
-        <div class="rail"><div class="bar edu" style="left:2.6%;width:26.3%"></div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section id="practice">
   <div class="wrap">
-    <p class="label">Current Work</p>
-    <h2>What an office manager<br>actually runs at a litigation firm</h2>
-    <div class="grid2">
-      <div class="cell">
-        <span class="n">Calendar</span>
-        <h3>Court coverage for five attorneys</h3>
-        <p>Assign counsel across simultaneous LASC courtrooms — trials, ex partes, motions, OSCs — with no duplicate appearances and zero missed hearings.</p>
-      </div>
-      <div class="cell">
-        <span class="n">Billing</span>
-        <h3>Revenue that would have been left behind</h3>
-        <p>Audit every active matter in Clio against the calendar before each hearing, consistently recovering $350–$2,500 per matter in unbilled appearance and motion preparation fees.</p>
-      </div>
-      <div class="cell">
-        <span class="n">Enforcement</span>
-        <h3>Writs of possession, end to end</h3>
-        <p>Prepare and ship sheriff writ packages — SER-001, SER-001A, EJ-130 — to LASD civil service, cutting processing time and keeping full Clio tracking compliance.</p>
-      </div>
-      <div class="cell">
-        <span class="n">Filings</span>
-        <h3>Notices of ruling and service</h3>
-        <p>Draft and e-file through the LASC Attorney Portal and Countrywide, then manage proof of service across represented and unrepresented defendants.</p>
-      </div>
-    </div>
+    <p class="label">Experience</p>
+    <h2>Before law school,<br>I ran the floor at a litigation firm</h2>
+    <p class="lead" style="margin-bottom:38px">As Office Manager at California Property Law Group, a boutique landlord-tenant firm, I managed the operational side of a high-volume practice — coordinating court coverage for five attorneys across simultaneous LASC courtrooms, auditing every matter in Clio to recover unbilled fees, running writ-of-possession enforcement end to end, and drafting and e-filing notices of ruling. It taught me how a firm actually makes money and keeps its commitments, which is not something they cover in a casebook.</p>
     <p class="tools"><b>Systems</b> — Clio · LASC Attorney Portal · Countrywide E-Filing · Adobe Acrobat · Front · Stamps · Microsoft Excel</p>
   </div>
 </section>
@@ -525,7 +377,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
     <h2>What I'm looking for</h2>
     <div class="ask">
       <div>
-        <p class="lead">I start at Loyola this fall. Between now and my 1L summer, the most useful thing anyone can offer is twenty minutes — how a transactional group actually staffs juniors, what a first-year deal associate's week looks like, what you wish you'd known before OCI.</p>
+        <p class="lead">I'm in my 1L year at Loyola, concentrating in entertainment and media law. The most useful thing anyone can offer is twenty minutes — how a transactional group actually staffs juniors, what a first-year deal associate's week looks like, what you wish you'd known before OCI.</p>
         <p class="lead">I've had those conversations with attorneys at Gibson Dunn, Kirkland &amp; Ellis, and Willkie Farr, and each one changed how I'm planning the next three years. If any of the below sits in your world, I'd like to hear from you.</p>
         <div class="btns">
           <a class="btn btn-solid" href="mailto:nathancastillo629@gmail.com?subject=Coffee%20chat">Email me</a>
@@ -536,7 +388,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
       </div>
       <ul class="asklist">
         <li><b>Practice Areas</b>Sports and entertainment transactions · corporate and M&amp;A · licensing and IP · NIL and college athletics regulation</li>
-        <li><b>Timing</b>1L summer 2027 · 2L summer 2028 · open to informational conversations now</li>
+        <li><b>Timing</b>1L summer 2027 · 2L summer 2028 · open to conversations now</li>
         <li><b>Based In</b>Los Angeles — available in person across the county</li>
         <li><b>Also Useful</b>Referrals, panel and speaker introductions, and anything aimed at first-generation and Latino students entering the profession</li>
       </ul>
@@ -547,7 +399,7 @@ footer{background:var(--sand);border-top:1px solid var(--rule-2);padding:84px 0 
 <footer>
   <div class="wrap">
     <p class="label q">Get in touch</p>
-    <p class="cta">Starting 1L this fall —<br><a href="mailto:nathancastillo629@gmail.com">let's talk.</a></p>
+    <p class="cta">1L at Loyola Law —<br><a href="mailto:nathancastillo629@gmail.com">let's talk.</a></p>
     <p class="fmeta">
       <a href="mailto:nathancastillo629@gmail.com">nathancastillo629@gmail.com</a>
       <a href="https://www.linkedin.com/in/nathan-castillo4126/" target="_blank" rel="noopener">linkedin.com/in/nathan-castillo4126</a>
